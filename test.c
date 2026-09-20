@@ -2,6 +2,12 @@
 
 int main(void)
 {
-    printf("C23 test\n");
+    int *value = nullptr;
+
+    if (value == nullptr)
+    {
+        printf("C23 nullptr: OK\n");
+    }
+
     return 0;
 }
