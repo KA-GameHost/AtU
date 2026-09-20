@@ -2,12 +2,14 @@
 
 int main(void)
 {
-    int *value = nullptr;
+    const int original = 42;
 
-    if (value == nullptr)
-    {
-        printf("C23 nullptr: OK\n");
-    }
+    typeof_unqual(original) copy = original;
+
+    copy = 100;
+
+    printf("original = %d\n", original);
+    printf("copy     = %d\n", copy);
 
     return 0;
 }
